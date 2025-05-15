@@ -112,16 +112,16 @@
       const card = document.createElement("div");
       card.className = "nutrient-card";
 
-      const canvas = document.createElement("canvas");
-      canvas.id = `chart${i}`;
-      card.appendChild(canvas);
-
-      card.innerHTML += `
+      card.innerHTML = `
         <h3>${n.name}</h3>
         <p>Intake: ${n.intake} ${n.unit}</p>
         <p>Recommended: ${n.rdaF} ${n.unit}</p>
         <p>${percent}% achieved</p>
       `;
+
+      const canvas = document.createElement("canvas");
+      canvas.id = `chart${i}`;
+      card.appendChild(canvas);
       container.appendChild(card);
 
       new Chart(canvas, {
