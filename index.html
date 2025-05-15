@@ -38,14 +38,17 @@
     }
     .nutrient-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 1rem;
+      justify-items: center;
     }
     .nutrient-card {
       background: white;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      padding: 1rem;
+      padding: 0.8rem;
+      width: 100%;
+      max-width: 180px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -57,11 +60,11 @@
     }
     .nutrient-card p {
       margin: 0.1rem;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
     canvas {
-      width: 80px !important;
-      height: 80px !important;
+      width: 60px !important;
+      height: 60px !important;
       margin-bottom: 0.5rem;
     }
   </style>
@@ -76,7 +79,6 @@
     Recommended values may vary depending on individual conditions and country-specific guidelines.<br>
     * 본 영양 기준은 2020년 한국인 영양섭취기준(KDRIs) 중 20–29세를 기준으로 작성되었습니다. 개인의 상황이나 국가별 기준에 따라 차이가 있을 수 있습니다.
   </div>
-
   <script>
     const nutrients = [
       { name: "Energy", unit: "kcal", intake: 670, rdaF: 2100 },
